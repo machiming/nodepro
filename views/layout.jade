@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/add.css')
+    script( src='/javascripts/echarts.js')
+    script( src='/javascripts/angular.js')
+    script( src='/javascripts/index.js')
+  body
+     div(ng-app="myApp")(ng-controller="siteCtrl")
+       input(type="text" ng-model="value")
+       button(ng-click="tijiao()")='提交'
+     div(style="width: 1700px;height:800px;margin:0 auto")#main
+  script

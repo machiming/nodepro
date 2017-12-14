@@ -1,0 +1,12 @@
+block content
+    h1= title
+    p Welcome to #{title}
+    script( src='/javascripts/angular.js')
+    script( src='/javascripts/phone.js')
+   body
+     div(ng-app="myApp")(ng-controller="siteCtrl")
+       input(type="text" ng-model="value")
+       input(type="text" ng-model="title")
+       input(type="text" ng-model="content")
+       button(ng-click="tijiao()")='提交'
+     div(style="width: 1700px;height:800px;margin:0 auto")#main

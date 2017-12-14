@@ -14,7 +14,6 @@ router.get('/',function (req,res,next) {
   res.render('email')
 })
 router.post('/send', function(req, res, next) {
-  console.log(req.body);
   var options = {
     from        : '837944832@qq.com',
     to          : req.body.name,

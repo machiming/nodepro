@@ -17,6 +17,9 @@
     "mysql": "*",
     "nodemailer": "^4.4.1",
     "serve-favicon": "~2.4.5",
-    "superagent": "*"
+    "superagent": "*",
+    "request": "*",
+    "crypto": "*",
+    "md5": "*"
   }
 }

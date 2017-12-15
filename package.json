@@ -21,6 +21,7 @@
     "request": "*",
     "crypto": "*",
     "md5": "*",
-    "express-session":"*"
+    "express-session":"*",
+    "pug": "*"
   }
 }

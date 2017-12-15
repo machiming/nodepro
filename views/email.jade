@@ -3,8 +3,8 @@ block content
     p Welcome to #{title}
     script( src='/javascripts/angular.js')
     script( src='/javascripts/email.js')
-   body
-     div(ng-app="myApp")(ng-controller="siteCtrl")
+   body(ng-app="myApp")
+     div(ng-controller="siteCtrl")
        input(type="text" ng-model="value")
        input(type="text" ng-model="title")
        input(type="text" ng-model="content")

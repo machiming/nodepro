@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/add.css">
+    <script src="/javascripts/echarts.js"></script>
+    <script src="/javascripts/angular.js"></script>
+    <script src="/javascripts/index.js"></script>
+  </head>
+  <body>
+    <div ng-app="myApp" ng-controller="siteCtrl">
+      <input type="text" ng-model="value">
+      <button ng-click="tijiao()">提交</button>
+    </div>
+    <div style="width: 1700px;height:800px;margin:0 auto" id="main"></div>
+  </body>
+  <script></script>
 </html>

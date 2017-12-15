@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
+<h1></h1>
+<p>Welcome to </p>
+<script src="/javascripts/angular.js"></script>
+<script src="/javascripts/phone.js"></script>
+<body ng-app="myApp">
+  <div ng-controller="siteCtrl">
+    <button ng-click="huoqu()">提交</button>
+    <input type="text" ng-model="code"/>
+    <div></div>
+    <button ng-click="tijiao()">校验</button>
+  </div>
+  <div style="width: 1700px;height:800px;margin:0 auto" id="main"></div>
 </body>
-</html>

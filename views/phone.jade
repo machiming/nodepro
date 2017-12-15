@@ -3,10 +3,10 @@ block content
     p Welcome to #{title}
     script( src='/javascripts/angular.js')
     script( src='/javascripts/phone.js')
-   body
-     div(ng-app="myApp")(ng-controller="siteCtrl")
-       input(type="text" ng-model="value")
-       input(type="text" ng-model="title")
-       input(type="text" ng-model="content")
-       button(ng-click="tijiao()")='提交'
+   body(ng-app="myApp")
+     div(ng-controller="siteCtrl")
+       button(ng-click="huoqu()")='提交'
+       input(type="text" ng-model="code")
+       div=code
+       button(ng-click="tijiao()")='校验'
      div(style="width: 1700px;height:800px;margin:0 auto")#main

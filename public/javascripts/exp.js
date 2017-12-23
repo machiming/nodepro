@@ -50,6 +50,7 @@ app.controller('siteCtrl', function($scope, $http) {
           //快递公司
           $scope.expname = $scope.exp[$scope.result['ShipperCode']];
           if($scope.result.State==0){
+            $scope.Traces='';
             $scope.reason = $scope.result.Reason;
           }else if($scope.result.Traces.length>0){
              $scope.Traces=$scope.result.Traces;

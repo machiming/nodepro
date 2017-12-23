@@ -10,9 +10,13 @@
   </head>
   <body ng-app="myApp" id="exp">
     <div ng-controller="siteCtrl">
-      <select ng-model="select" ng-options="key as value for ( key , value ) in exp" ng-change="cg(select)"></select>
+      <select ng-model="select" ng-options="key as value for ( key , value ) in exp" ng-change="cg(select)">
+        <option value="" selected="selected">请选择快递公司</option>
+      </select>
       <input type="text" ng-model="value" placeholder="请填写快递单号" autocomplete="on"/>
-      <button type="submit" ng-click="tijiao()">提交</button>
+      <div style="width:100%;text-align:center">
+        <button type="submit" ng-click="tijiao()">提交</button>
+      </div>
       <p>快递单号：{{LogisticCode}}</p>
       <p>快递公司：{{expname}}</p>
       <p>{{reason}}</p>

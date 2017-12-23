@@ -3,6 +3,8 @@
   padding: 0;
 }
 #exp {
+  box-sizing: border-box;
+  padding: 1em;
   input,select{
     display: block;
     width: 100%;
@@ -81,6 +83,8 @@
         left: 20%;
         top: 50%;
         transform: translateY(-50%);
+        word-break: break-all;
+        font-size: 15px;
       }
       &:first-child{
         color: orange;

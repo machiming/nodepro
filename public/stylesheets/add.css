@@ -1,83 +1,87 @@
 * {
   margin: 0;
   padding: 0; }
-
-#exp input, #exp select {
-  display: block;
-  width: 100%;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 1em; }
-#exp button {
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc; }
-#exp ul {
-  list-style: none; }
-  #exp ul li {
-    width: 100%;
-    line-height: 4em;
-    height: 4em;
+#exp {
+  box-sizing: border-box;
+  padding: 1em; }
+  #exp input, #exp select {
     display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
     font-size: 14px;
-    position: relative; }
-    #exp ul li span.time {
-      display: block;
-      width: 20%;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1em; }
+  #exp button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc; }
+  #exp ul {
+    list-style: none; }
+    #exp ul li {
+      width: 100%;
+      line-height: 4em;
       height: 4em;
-      float: left; }
-      #exp ul li span.time span:nth-child(1) {
-        font-size: 18px;
-        display: block;
-        text-align: center;
-        width: 100%;
-        height: 2em;
-        line-height: 2em; }
-      #exp ul li span.time span:nth-child(2) {
-        font-size: 14px;
-        display: block;
-        text-align: center;
-        width: 100%;
-        height: 1em;
-        line-height: 0.5em; }
-    #exp ul li span.position {
       display: block;
-      width: 80%;
-      line-height: 1.5em;
-      float: left;
-      position: absolute;
-      left: 20%;
-      top: 50%;
-      transform: translateY(-50%); }
-    #exp ul li:first-child {
-      color: orange; }
-    #exp ul li:after {
-      clear: both; }
+      font-size: 14px;
+      position: relative; }
+      #exp ul li span.time {
+        display: block;
+        width: 20%;
+        height: 4em;
+        float: left; }
+        #exp ul li span.time span:nth-child(1) {
+          font-size: 18px;
+          display: block;
+          text-align: center;
+          width: 100%;
+          height: 2em;
+          line-height: 2em; }
+        #exp ul li span.time span:nth-child(2) {
+          font-size: 14px;
+          display: block;
+          text-align: center;
+          width: 100%;
+          height: 1em;
+          line-height: 0.5em; }
+      #exp ul li span.position {
+        display: block;
+        width: 80%;
+        line-height: 1.5em;
+        float: left;
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        transform: translateY(-50%);
+        word-break: break-all;
+        font-size: 15px; }
+      #exp ul li:first-child {
+        color: orange; }
+      #exp ul li:after {
+        clear: both; }
 
 /*# sourceMappingURL=add.css.map */

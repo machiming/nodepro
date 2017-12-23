@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+#exp input, #exp select, #exp button {
+  float: left;
+  display: inline-block;
+  font-size: 0.7rem;
+  height: 2rem;
+  color: #999;
+  line-height: 2rem;
+  width: 100%;
+  margin: 0.25rem 0; }
+#exp ul {
+  list-style: none; }
+  #exp ul li {
+    width: 100%;
+    line-height: 4em;
+    height: 4em;
+    display: block;
+    font-size: 14px;
+    position: relative; }
+    #exp ul li span.time {
+      display: block;
+      width: 20%;
+      height: 4em;
+      float: left; }
+      #exp ul li span.time span:nth-child(1) {
+        font-size: 18px;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 2em;
+        line-height: 2em; }
+      #exp ul li span.time span:nth-child(2) {
+        font-size: 14px;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 1em;
+        line-height: 0.5em; }
+    #exp ul li span.position {
+      display: block;
+      width: 80%;
+      line-height: 1.5em;
+      float: left;
+      position: absolute;
+      left: 20%;
+      top: 50%;
+      transform: translateY(-50%); }
+    #exp ul li:first-child {
+      color: orange; }
+    #exp ul li:after {
+      clear: both; }
+
+/*# sourceMappingURL=add.css.map */

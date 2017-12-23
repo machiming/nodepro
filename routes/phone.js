@@ -54,7 +54,6 @@ router.post('/send',function (req,res,next) {
         if (!error && response.statusCode == 200) {
             req.session.code = code;
             res.send(response);
-            res.send(req.session.code);
 
         }else {
             res.json(error)

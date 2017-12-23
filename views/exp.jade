@@ -1,0 +1,24 @@
+html
+  head
+    meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title='hello'
+    script( src='/javascripts/angular.js')
+    script( src='/javascripts/exp.js')
+    link( rel="stylesheet" href='/stylesheets/add.css')
+  body(ng-app="myApp" id='exp')
+    div(ng-controller="siteCtrl")
+      select(ng-model="select" ng-options="key as value for ( key , value ) in exp" ng-change="cg(select)")
+      input(type="text" ng-model="value" placeholder='请填写快递单号' autocomplete='on')
+      button(type="submit" ng-click="tijiao()")='提交'
+      p='快递单号：{{LogisticCode}}'
+      p='快递公司：{{expname}}'
+      p='{{reason}}'
+      ul
+         li(ng-repeat="x in Traces|orderBy:x.AcceptTime:'desc'")
+           span(class='time')
+              span="{{x.AcceptTime | limitTo:10|limitTo:-5}}"
+              span="{{x.AcceptTime | limitTo:-8|limitTo:5}}"
+           span(class='position')='{{x.AcceptStation}}'
+
+

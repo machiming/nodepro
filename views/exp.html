@@ -6,14 +6,13 @@
     <title>hello</title>
     <script src="//at.alicdn.com/t/font_519408_1ejmqtclz9ztzkt9.js"></script>
     <script src="/javascripts/angular.js"></script>
-    <script src="/javascripts/exp.js"></script>
     <link rel="stylesheet" href="/stylesheets/add.css"/>
   </head>
   <body ng-app="myApp" id="exp">
     <div ng-controller="siteCtrl">
       <div class="wrapper"><span class="inputwrapper"><span class="floatdiv">
             <select ng-model="select" ng-options="key as value for ( key , value ) in exp" ng-change="cg(select)">
-              <option value="" selected="selected">选择ku</option>
+              <option value="" selected="selected">选择快递</option>
             </select></span>
           <!--svg.icon
           // use(xlink:href="#icon-microphoneicon")
@@ -34,7 +33,8 @@
           <li ng-repeat="x in Traces|orderBy:x.AcceptTime:'desc'"><span class="time"><span>{{x.AcceptTime | limitTo:10|limitTo:-5}}</span><span>{{x.AcceptTime | limitTo:-8|limitTo:5}}</span></span><span class="position">{{x.AcceptStation}}</span></li>
         </ul>
       </div>
+      <script src="/javascripts/exp.js"></script>
+      <script src="/javascripts/behave.js"></script>
     </div>
   </body>
-  <script src="/javascripts/behave.js"></script>
 </html>

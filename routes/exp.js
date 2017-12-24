@@ -19,6 +19,7 @@ router.get('/',function (req,res,next) {
 });
 router.post('/send',function (req,res,next) {
    RequestData="{'OrderCode':'','ShipperCode':'"+req.body.exp_code+"','LogisticCode':'"+req.body.No+"'}";
+   console.log(RequestData)
    md5_result=md5(RequestData+api_key);
    console.log(md5_result);
    sign=new Buffer(md5_result).toString('base64');

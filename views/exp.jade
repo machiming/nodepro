@@ -5,7 +5,6 @@ html
     title='hello'
     script(src='//at.alicdn.com/t/font_519408_1ejmqtclz9ztzkt9.js')
     script( src='/javascripts/angular.js')
-    script( src='/javascripts/exp.js')
     link( rel="stylesheet" href='/stylesheets/add.css')
   body(ng-app="myApp" id='exp')
     div(ng-controller="siteCtrl")
@@ -34,6 +33,7 @@ html
               span="{{x.AcceptTime | limitTo:10|limitTo:-5}}"
               span="{{x.AcceptTime | limitTo:-8|limitTo:5}}"
             span(class='position')='{{x.AcceptStation}}'
-  script( src='/javascripts/behave.js')
+      script( src='/javascripts/exp.js')
+      script( src='/javascripts/behave.js')
 
 

@@ -4,7 +4,7 @@ app.controller('siteCtrl', function($scope, $http) {
   $scope.huoqu = function () {
     $http({
       method: 'POST',
-      headers: { 'Content-Type': 'Content-type:application/x-www-form-urlencoded' },
+      headers: { 'Content-Type':'application/x-www-form-urlencoded' },
       transformRequest: function(obj) {
         var str = [];
         for (var p in obj) {

@@ -1,8 +1,7 @@
 let express = require('express');
 let request = require('request');
 let router = express.Router();
-let crypto=require('crypto');
-let md5=crypto.createHash("md5");
+let md5=require('md5');
 let date=new Date();
 let rp={};
 
@@ -39,7 +38,7 @@ router.post('/send',function (req,res,next) {
     param:code,
     to:'15698268081',
     timestamp:time,
-    sig:md5.update('2640660739284c109f7581c5f66b1ffb'+'27c7501c9f2244b7a2169d737f478d28'+time).digest('hex'),
+    sig:md5('2640660739284c109f7581c5f66b1ffb'+'27c7501c9f2244b7a2169d737f478d28'+time),
     respDataType:'JSON'
   };
     request({

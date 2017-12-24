@@ -13,11 +13,16 @@ let phone = require('./routes/phone');
 let exp = require('./routes/exp');
 let app = express();
 app.use(bodyParser.urlencoded({extended:false}));
-app.all('*', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
-    next();
+app.all('*',function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+    res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
+    if (req.method == 'OPTIONS') {
+        res.send(200); /让options请求快速返回/
+    }
+    else {
+        next();
+    }
 });
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

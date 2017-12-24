@@ -97,10 +97,12 @@ body {
 .wrapper {
   display: flex;
   position: relative;
-  padding: 0 16px; }
+  padding: 0 16px;
+  height: 35px; }
 
 .inputwrapper {
-  float: left; }
+  float: left;
+  height: 35px; }
 
 .inputwrapper + button {
   float: left;
@@ -121,11 +123,15 @@ body {
   border: 1px solid #b8b8b8;
   outline: none;
   width: 60vw;
-  height: 35px;
+  height: 21px;
   text-indent: 8px;
+  padding: 7px 8px;
   font-size: 15px;
-  line-height: 35px;
-  border-right: none; }
+  line-height: 21px;
+  border-right: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  height: 35px; }
 
 .inputwrapper input:focus {
   border-color: #4b94fc; }

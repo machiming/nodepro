@@ -22,14 +22,15 @@ app.controller('siteCtrl', function($scope, $http) {
   "UC":"优速快递",
   "DBL":"德邦",
   "FAST":"快捷快递",
-   "MAZON":"亚马逊",
-   "ZJS" :"宅急送"
+  "MAZON":"亚马逊",
+  "ZJS":"宅急送"
   };
-
   $scope.cg = function (obj) {
       $scope.exp_code=obj;
   };
   $scope.tijiao = function () {
+      checkB.querySelector(".circle").classList.add('active');
+      dolog.classList.add('show');
       $http({
         method: 'POST',
         data: {"exp_code":$scope.exp_code,"No":$scope.value,},
@@ -41,25 +42,25 @@ app.controller('siteCtrl', function($scope, $http) {
           }
           return str.join("&");
         },
-        url: 'http://localhost:3000/exp/send',
+        url: 'http://192.168.1.101:3000/exp/send',
       }).then(function successCallback(response) {
           //返回结果
-          $scope.result=response.data;
+            $scope.result=response.data;
            //订单号
-           $scope.LogisticCode=$scope.result.LogisticCode;
+            $scope.LogisticCode=$scope.result.LogisticCode;
           //快递公司
-          $scope.expname = $scope.exp[$scope.result['ShipperCode']];
+            $scope.expname = $scope.exp[$scope.result['ShipperCode']];
           if($scope.result.State==0){
             $scope.Traces='';
             $scope.reason = $scope.result.Reason;
           }else if($scope.result.Traces.length>0){
-             $scope.Traces=$scope.result.Traces;
+            $scope.Traces=$scope.result.Traces;
             $scope.reason='';
-             console.log($scope.Traces)
+            console.log($scope.Traces)
           }
         },
         function errorCallback(response) {
-          console.log(response)
+            console.log(response)
         })
   };
   app.filter('dealdata', function() {
@@ -68,7 +69,6 @@ app.controller('siteCtrl', function($scope, $http) {
       return RE_DATE.exec(text);
     }
   });
-
   app.filter('reverse', function() {
     return function(text) {
       return text.split("").reverse().join("");

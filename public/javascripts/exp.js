@@ -14,7 +14,7 @@ app.controller('siteCtrl', function($scope, $http) {
   "STO":"申通快递",
   "YTO":"圆通速递",
   "YD":"韵达速递",
-  "YZPY":"邮政快递包裹",
+  "YZPY":"邮政快递",
   "HHTT":"天天快递",
   "JD":"京东物流",
   "QFKD":"全峰快递",

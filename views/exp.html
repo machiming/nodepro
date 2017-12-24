@@ -4,25 +4,37 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>hello</title>
+    <script src="//at.alicdn.com/t/font_519408_1ejmqtclz9ztzkt9.js"></script>
     <script src="/javascripts/angular.js"></script>
     <script src="/javascripts/exp.js"></script>
     <link rel="stylesheet" href="/stylesheets/add.css"/>
   </head>
   <body ng-app="myApp" id="exp">
     <div ng-controller="siteCtrl">
-      <select ng-model="select" ng-options="key as value for ( key , value ) in exp" ng-change="cg(select)">
-        <option value="" selected="selected">请选择快递公司</option>
-      </select>
-      <input type="text" ng-model="value" placeholder="请填写快递单号" autocomplete="on"/>
-      <div style="width:100%;text-align:center">
-        <button type="submit" ng-click="tijiao()">提交</button>
+      <div class="wrapper"><span class="inputwrapper"><span class="floatdiv">
+            <select ng-model="select" ng-options="key as value for ( key , value ) in exp" ng-change="cg(select)">
+              <option value="" selected="selected">选择ku</option>
+            </select></span>
+          <!--svg.icon
+          // use(xlink:href="#icon-microphoneicon")
+          //span.split-line
+          //svg.icon
+          // use(xlink:href="#icon-photo")
+          -->
+          <input type="text" ng-model="value" placeholder="请输入快递单号" id="keyword"/></span>
+        <button type="submit" ng-click="tijiao()" id="checkB">查询<span class="circle"></span></button>
       </div>
-      <p>快递单号：{{LogisticCode}}</p>
-      <p>快递公司：{{expname}}</p>
-      <p>{{reason}}</p>
-      <ul>
-        <li ng-repeat="x in Traces|orderBy:x.AcceptTime:'desc'"><span class="time"><span>{{x.AcceptTime | limitTo:10|limitTo:-5}}</span><span>{{x.AcceptTime | limitTo:-8|limitTo:5}}</span></span><span class="position">{{x.AcceptStation}}</span></li>
-      </ul>
+      <div id="dolog">
+        <div class="titleMsg">
+          <p>快递单号：{{LogisticCode}}</p>
+          <p>快递公司：{{expname}}</p>
+        </div>
+        <p>{{reason}}</p>
+        <ul>
+          <li ng-repeat="x in Traces|orderBy:x.AcceptTime:'desc'"><span class="time"><span>{{x.AcceptTime | limitTo:10|limitTo:-5}}</span><span>{{x.AcceptTime | limitTo:-8|limitTo:5}}</span></span><span class="position">{{x.AcceptStation}}</span></li>
+        </ul>
+      </div>
     </div>
   </body>
+  <script src="/javascripts/behave.js"></script>
 </html>

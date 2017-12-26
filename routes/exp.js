@@ -55,16 +55,16 @@ router.post('/send',function (req,res,next) {
         var  flag=false;
         db.con(function (connect) {
             connect.query(sql, function (err,row,result) {
-                console.log(row)
+                console.log(row);
                 if (err) {
-                    console.log(err)
+                    console.log(err);
                     return
                 }
                if(row.length>0){
-                   deal = "UPDATE `kuaidi`.`info` SET `track` = '"+body.Traces+"' WHERE `expCode` = "+body.ShipperCode+"AND `No`="+body.LogisticCode+"";
+                   deal = "UPDATE `kuaidi`.`info` SET `track` = '"+JSON.stringify(body.Traces)+"',`updatetime` = '"+new Date().toLocaleString()+"',`step` = '"+(body.Traces).length+"' WHERE `expCode` = '"+body.ShipperCode+"' AND `No`='"+body.LogisticCode+"'";
                    dealwith(deal)
                }else {
-                   deal = "INSERT INTO `kuaidi`.`info`(`expCode`, `No`, `track`) VALUES ('"+body.ShipperCode+"', "+body.LogisticCode+", '"+JSON.stringify(body.Traces)+"')";
+                   deal = "INSERT INTO `kuaidi`.`info`(`expCode`, `No`, `track`,`creattime`,`step`) VALUES ('"+body.ShipperCode+"', "+body.LogisticCode+", '"+JSON.stringify(body.Traces)+"', '"+new Date().toLocaleString()+"','"+(body.Traces).length+"')";
                    dealwith(deal)
                }
             })

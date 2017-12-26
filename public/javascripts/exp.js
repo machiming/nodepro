@@ -42,7 +42,7 @@ app.controller('siteCtrl', function($scope, $http) {
           }
           return str.join("&");
         },
-        url: 'http://localhost:3000/exp/send',
+        url: 'http://192.168.1.101:3000/exp/send',
       }).then(function successCallback(response) {
           //返回结果
             $scope.result=response.data;
